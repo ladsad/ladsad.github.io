@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <div class="buttons">
+        <button id="yes" onclick="window.location.href='congrats.html'">Yes</button>
+        <button id="no">No</button>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("no");
+        let buttonSize = 18;
+        let clickCount = 0;
+
+        noButton.addEventListener("mouseover", function() {
+            setTimeout(() => {
+                let x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+                let y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+                
+                noButton.style.left = `${x}px`;
+                noButton.style.top = `${y}px`;
+            }, 100);
+        });
+
+        noButton.addEventListener("click", function() {
+            clickCount++;
+
+            // Shrink button on each click
+            if (buttonSize > 5) {
+                buttonSize -= 2;
+                noButton.style.fontSize = `${buttonSize}px`;
+                noButton.style.padding = "5px 10px";
+            }
+
+            // Redirect on third click
+            if (clickCount === 3) {
+                window.location.href = 'friendzone.html';
+            }
+        });
+    </script>
+</body>
+</html>

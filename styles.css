@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+/* Floating Hearts Animation */
+body::before {
+    content: "💖 💕 💘 💝 💓 💗 💞";
+    font-size: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: floatHearts 15s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(100vh); opacity: 0.2; }
+    50% { opacity: 0.4; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Heading */
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.buttons {
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+/* Common Button Styles */
+button {
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Yes Button */
+#yes {
+    background: linear-gradient(45deg, #ff4d6d, #ff758c);
+    color: white;
+}
+
+#yes:hover {
+    background: linear-gradient(45deg, #e63950, #ff4d6d);
+    transform: scale(1.1);
+}
+
+/* No Button */
+#no {
+    position: fixed;
+    background: linear-gradient(45deg, #bbbbbb, #dddddd);
+    color: black;
+}
+
+#no:hover {
+    background: linear-gradient(45deg, #aaaaaa, #cccccc);
+}

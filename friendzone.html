@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oof... 😢</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #2c3e50;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+
+        /* Sad Face Animation */
+        @keyframes sadFace {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .sad {
+            font-size: 50px;
+            animation: sadFace 1.5s infinite ease-in-out;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #607d8b, #78909c);
+            color: white;
+            box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #455a64, #546e7a);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Oof... 😢</h1>
+    <p>Looks like you just friendzoned me... But hey, friendship is awesome too... 🤗😢</p>
+    <p class="sad">😔</p>
+    <button onclick="window.location.href='index.html'">Try Again?</button>
+</body>
+</html>
